@@ -15,16 +15,16 @@ const Navbar = () => {
                 <NavLink to={"/pages-to-read"} className={({ isActive }) => isActive ? "text-[#23BE0A] border border-[#23BE0A] bg-transparent" : "hover:text-[#23BE0A] hover:border hover:border-[#23BE0A] hover:bg-transparent"}>Pages to Read</NavLink>
             </li>
             <li>
-                <NavLink to={""} className={""}>Sign In</NavLink>
+                <NavLink to={""} className={"block lg:hidden"}>Sign In</NavLink>
             </li>
             <li>
-                <NavLink to={""} className={""}>Sign Up</NavLink>
+                <NavLink to={""} className={"block lg:hidden"}>Sign Up</NavLink>
             </li>
         </>
     );
 
     return (
-        <div className='container mx-auto  mb-12'>
+        <div className='container mx-auto mt-5 mb-12'>
             <div className="navbar">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -44,7 +44,7 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-                <div className="navbar-end space-x-4 hidden lg:block">
+                <div className="navbar-end space-x-4 hidden lg:flex">
                     <a className="btn bg-[#23BE0A] text-white text-lg font-semibold px-5 py-7 rounded-lg hover:bg-transparent hover:text-[#23BE0A] hover:border hover:border-[#23BE0A]">Sign In</a>
                     <a className="btn bg-[#59C6D2] text-white text-lg font-semibold px-5 py-7 rounded-lg hover:bg-transparent hover:text-[#59C6D2] hover:border hover:border-[#59C6D2]">Sign Up</a>
                 </div>

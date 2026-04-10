@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 const BookCard = ({ book }) => {
     return (
         <Link to={`/bookdetails/${book.bookId}`} className="card bg-base-100 shadow-sm p-6 border border-[#131313]/15 rounded-2xl">
-            <figure className='px-24 py-8 bg-[#F3F3F3] rounded-2xl'>
+            <figure className=' py-8 bg-[#F3F3F3] rounded-2xl'>
                 <img
                     src={book.image}
                     alt={book.bookName}
