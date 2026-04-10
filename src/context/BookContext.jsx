@@ -1,6 +1,13 @@
-import React, { Children, createContext, useState } from 'react';
+import React, { createContext, useState } from 'react';
 import { toast } from 'react-toastify';
-import { addReadListToLocalDB, addWishListToLocalDB, getAllReadListFromLocalDB, getAllWishListFromLocalDB } from '../utils/localDB';
+import {
+    addReadListToLocalDB,
+    addWishListToLocalDB,
+    getAllReadListFromLocalDB,
+    getAllWishListFromLocalDB,
+    removeReadListFromLocalDB,
+    removeWishListFromLocalDB
+} from '../utils/localDB';
 
 export const BookContext = createContext();
 
@@ -48,14 +55,36 @@ const BookProvider = ({ children }) => {
         }
     };
 
+    const handleRemoveReadBook = (bookId) => {
+        const bookToRemove = readList.find((book) => book.bookId === bookId);
+        removeReadListFromLocalDB(bookId);
+        setReadList((currentReadList) => currentReadList.filter((book) => book.bookId !== bookId));
+
+        if (bookToRemove) {
+            toast.success(`${bookToRemove.bookName} has been removed from your read list.`);
+        }
+    };
+
+    const handleRemoveWishBook = (bookId) => {
+        const bookToRemove = wishList.find((book) => book.bookId === bookId);
+        removeWishListFromLocalDB(bookId);
+        setWishList((currentWishList) => currentWishList.filter((book) => book.bookId !== bookId));
+
+        if (bookToRemove) {
+            toast.success(`${bookToRemove.bookName} has been removed from your wish list.`);
+        }
+    };
+
 
     const data = {
         readList,
         setReadList,
         handleReadButton,
+        handleRemoveReadBook,
         wishList,
         setWishList,
         handleWishListButton,
+        handleRemoveWishBook,
     };
 
     return <BookContext.Provider value={data}>

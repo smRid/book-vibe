@@ -17,11 +17,11 @@ const BookDetails = () => {
     return (
         <div className='container mx-auto min-h-screen'>
             <div className=" grid grid-cols-1 lg:grid-cols-2 gap-12 px-5 lg:px-0 ">
-                <figure className='bg-[#131313]/5 rounded-2xl w-full flex items-center justify-center'>
+                <figure className='bg-[#131313]/5 rounded-2xl w-full min-h-[420px] lg:min-h-[720px] flex items-center justify-center p-6 lg:p-10'>
                     <BookCover
                         book={expectedBook}
                         alt={expectedBook?.bookName}
-                        className='rounded-2xl h-[400px] py-5 object-contain' />
+                        className='rounded-2xl w-full max-w-[260px] sm:max-w-[320px] lg:max-w-[420px] max-h-[640px] object-contain drop-shadow-2xl' />
                 </figure>
                 <div className="card-body flex flex-col gap-6 h-full">
                     <div className="flex flex-col gap-4">

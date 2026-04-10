@@ -16,6 +16,12 @@ const addReadListToLocalDB = (book) => {
     }
 }
 
+const removeReadListFromLocalDB = (bookId) => {
+    const allBooks = getAllReadListFromLocalDB();
+    const updatedBooks = allBooks.filter((book) => book.bookId !== bookId);
+    localStorage.setItem("readList", JSON.stringify(updatedBooks));
+};
+
 const getAllWishListFromLocalDB = () => {
     const allWishList = localStorage.getItem("wishList");
 
@@ -34,5 +40,18 @@ const addWishListToLocalDB = (book) => {
     }
 }
 
+const removeWishListFromLocalDB = (bookId) => {
+    const allBooks = getAllWishListFromLocalDB();
+    const updatedBooks = allBooks.filter((book) => book.bookId !== bookId);
+    localStorage.setItem("wishList", JSON.stringify(updatedBooks));
+};
 
-export { getAllReadListFromLocalDB, addReadListToLocalDB, getAllWishListFromLocalDB, addWishListToLocalDB };
+
+export {
+    getAllReadListFromLocalDB,
+    addReadListToLocalDB,
+    removeReadListFromLocalDB,
+    getAllWishListFromLocalDB,
+    addWishListToLocalDB,
+    removeWishListFromLocalDB
+};
