@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 460" role="img" aria-labelledby="title desc">
+  <title id="title">Book cover placeholder</title>
+  <desc id="desc">A placeholder image shown when a book cover is unavailable.</desc>
+  <rect width="320" height="460" rx="28" fill="#f3f3f3"/>
+  <rect x="54" y="52" width="212" height="300" rx="18" fill="#ffffff" stroke="#d9d9d9" stroke-width="6"/>
+  <rect x="78" y="82" width="28" height="240" rx="10" fill="#23BE0A" opacity="0.9"/>
+  <rect x="124" y="110" width="108" height="12" rx="6" fill="#d7d7d7"/>
+  <rect x="124" y="138" width="86" height="12" rx="6" fill="#e3e3e3"/>
+  <rect x="124" y="166" width="96" height="12" rx="6" fill="#e3e3e3"/>
+  <path d="M119 246c0-22 18-40 41-40 18 0 32 10 40 26 8-16 22-26 40-26 23 0 41 18 41 40 0 47-53 79-81 96-28-17-81-49-81-96z" fill="#59C6D2" opacity="0.7"/>
+  <rect x="72" y="382" width="176" height="16" rx="8" fill="#d0d0d0"/>
+  <rect x="99" y="410" width="122" height="14" rx="7" fill="#e0e0e0"/>
+</svg>

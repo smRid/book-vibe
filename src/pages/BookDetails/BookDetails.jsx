@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { useLoaderData, useParams } from 'react-router';
 import { BookContext } from '../../context/BookContext';
+import BookCover from '../../components/ui/BookCover';
 
 
 const BookDetails = () => {
@@ -17,10 +18,10 @@ const BookDetails = () => {
         <div className='container mx-auto min-h-screen'>
             <div className=" grid grid-cols-1 lg:grid-cols-2 gap-12 px-5 lg:px-0 ">
                 <figure className='bg-[#131313]/5 rounded-2xl w-full flex items-center justify-center'>
-                    <img
-                        src={expectedBook?.image}
-                        alt="Movie"
-                        className='rounded-2xl h-[400px] py-5' />
+                    <BookCover
+                        book={expectedBook}
+                        alt={expectedBook?.bookName}
+                        className='rounded-2xl h-[400px] py-5 object-contain' />
                 </figure>
                 <div className="card-body flex flex-col gap-6 h-full">
                     <div className="flex flex-col gap-4">

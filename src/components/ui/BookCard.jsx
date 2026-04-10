@@ -1,15 +1,16 @@
 import React from 'react';
 import { FaRegStar } from 'react-icons/fa';
 import { Link } from 'react-router';
+import BookCover from './BookCover';
 
 const BookCard = ({ book }) => {
     return (
         <Link to={`/bookdetails/${book.bookId}`} className="card bg-base-100 shadow-sm p-6 border border-[#131313]/15 rounded-2xl">
             <figure className=' py-8 bg-[#F3F3F3] rounded-2xl'>
-                <img
-                    src={book.image}
+                <BookCover
+                    book={book}
                     alt={book.bookName}
-                    className='rounded-xl h-48' />
+                    className='rounded-xl h-48 object-contain' />
             </figure>
             <div className="card-body p-0 flex flex-col gap-4 pb-2.5 border-b border-dashed border-[#131313]/15 mt-6">
                 <div className="flex gap-3">

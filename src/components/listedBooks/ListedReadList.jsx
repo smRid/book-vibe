@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { HiOutlineUsers } from 'react-icons/hi';
 import { IoDocumentTextOutline, IoLocationOutline } from 'react-icons/io5';
 import { BookContext } from '../../context/BookContext';
+import BookCover from '../ui/BookCover';
 
 const ListedReadList = ({ sortingType }) => {
 
@@ -43,10 +44,10 @@ const ListedReadList = ({ sortingType }) => {
                     <div key={book.id}>
                         <div className="flex flex-col lg:flex-row items-center gap-6 p-6 border border-[#131313]/15 rounded-2xl mt-8">
                             <figure className='w-[230px] py-7 px-12 bg-[#131313]/5 rounded-2xl'>
-                                <img
-                                    src={book.image}
+                                <BookCover
+                                    book={book}
                                     alt={book.bookName}
-                                    className='w-full ' />
+                                    className='w-full object-contain' />
                             </figure>
                             <div className="flex flex-col gap-4 w-full">
                                 <h1 className="text-2xl font-bold">{book.bookName}</h1>
