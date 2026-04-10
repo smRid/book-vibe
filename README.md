@@ -20,23 +20,23 @@ A polished book discovery and reading tracker built with React and Vite, where u
 ## Preview
 
 <p align="center">
-  <img src="./public/preview1.png" alt="Book Vibe Homepage Preview" width="800" />
+  <img src="./public/preview1.png" alt="Book Vibe Homepage Preview" width="600" />
 </p>
 
 <p align="center">
-  <img src="./public/preview2.png" alt="Book Vibe Books Grid Preview" width="800" />
+  <img src="./public/preview2.png" alt="Book Vibe Books Grid Preview" width="600" />
 </p>
 
 <p align="center">
-  <img src="./public/preview3.png" alt="Book Vibe Book Details Preview" width="800" />
+  <img src="./public/preview3.png" alt="Book Vibe Book Details Preview" width="600" />
 </p>
 
 <p align="center">
-  <img src="./public/preview4.png" alt="Book Vibe Read List Preview" width="800" />
+  <img src="./public/preview4.png" alt="Book Vibe Read List Preview" width="600" />
 </p>
 
 <p align="center">
-  <img src="./public/preview5.png" alt="Book Vibe Pages To Read Preview" width="800" />
+  <img src="./public/preview5.png" alt="Book Vibe Pages To Read Preview" width="600" />
 </p>
 
 > **Live Site:** [https://bookvibe2026.vercel.app/](https://bookvibe2026.vercel.app/)
@@ -112,20 +112,6 @@ A polished book discovery and reading tracker built with React and Vite, where u
 4. **Open in your browser**
 
    Navigate to `http://localhost:5173` to view the app locally.
-
-### Build for Production
-
-```bash
-npm run build
-```
-
-The optimized output will be generated in the `dist/` directory.
-
-### Lint the Project
-
-```bash
-npm run lint
-```
 
 ---
 
