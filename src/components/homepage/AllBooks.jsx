@@ -9,7 +9,7 @@ const AllBooks = () => {
 
     return (
         <div className='container mx-auto mt-24 flex flex-col gap-9 text-center'>
-            <h1 className='text-[40px] font-bold'>Book</h1>
+            <h1 className='text-[40px] font-bold'>Books Collection</h1>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-5 lg:px-0 mb-20">
                 {
